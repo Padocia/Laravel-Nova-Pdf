@@ -61,8 +61,45 @@ class InvoiceAction extends ExportToPdf
 }
 ```
 
+#### Attach action to a resource
+We'll Use the `User` resource as an example to add your action to the actions() list.
+```php
+<?php
+
+namespace App\Nova;
+
+use Illuminate\Http\Request;
+use App\Nova\Actions\InvoiceAction;
+
+class User extends Resource
+{
+    /**
+     * The model the resource corresponds to.
+     *
+     * @var string
+     */
+    public static $model = 'App\\User';
+    
+    // Other default resource methods
+    
+    /**
+     * Get the actions available for the resource.
+     *
+     * @param  \Illuminate\Http\Request $request
+     *
+     * @return array
+     */
+    public function actions(Request $request)
+    {
+        return [
+            new InvoiceAction,
+        ];
+    }
+}
+```
+
 #### Customize Browsershot
-Override the `handleBrowsershotOptions` method :
+Override the `handleBrowsershotOptions` method in the action class :
 ```php
 protected function handleBrowsershotOptions()
 {
@@ -73,7 +110,7 @@ protected function handleBrowsershotOptions()
 ```
 
 #### Change Filename
-Override the `filename` method :
+Override the `filename` method in the action class :
 ```php
 protected function filename()
 {
