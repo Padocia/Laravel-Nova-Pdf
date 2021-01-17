@@ -30,5 +30,6 @@
                 "Padocia\\NovaPdf\\NovaPdfServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "stable"
 }
