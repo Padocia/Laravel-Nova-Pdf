@@ -18,7 +18,12 @@ This package is using [Browsershot](https://github.com/spatie/browsershot#requir
 
 You can install the package via composer:
 ```
-composer padocia/laravel-nova-pdf
+composer require padocia/laravel-nova-pdf
+```
+
+If you don't have the `puppeteer` on your project:
+```
+npm install puppeteer
 ```
 
 You can publish the default blade template :
