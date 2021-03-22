@@ -3,7 +3,7 @@
 namespace Padocia\NovaPdf\Concerns;
 use Spatie\Browsershot\Browsershot;
 
-trait withBrowsershot
+trait WithBrowsershot
 {
     /**
      * @var \Spatie\Browsershot\Browsershot
