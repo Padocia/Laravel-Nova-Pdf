@@ -8,7 +8,7 @@ use Laravel\Nova\Fields\ActionFields;
 use Laravel\Nova\Http\Requests\ActionRequest;
 use Padocia\NovaPdf\Concerns\WithView;
 use Padocia\NovaPdf\Concerns\WithResource;
-use Padocia\NovaPdf\Concerns\withBrowsershot;
+use Padocia\NovaPdf\Concerns\WithBrowsershot;
 use Padocia\NovaPdf\Concerns\WithFilename;
 use Padocia\NovaPdf\Concerns\WithStylesContent;
 use Padocia\NovaPdf\Concerns\WithDisk;
@@ -18,7 +18,7 @@ use Carbon\Carbon;
 
 abstract class ExportToPdf extends Action
 {
-    use WithView, WithResource, withBrowsershot, WithFilename, WithStylesContent, WithDisk;
+    use WithView, WithResource, WithBrowsershot, WithFilename, WithStylesContent, WithDisk;
 
     /**
      * @var Laravel\Nova\Http\Requests\ActionRequest
