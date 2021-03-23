@@ -27,10 +27,6 @@ class NovaPdfServiceProvider extends ServiceProvider
         $this->app->booted(function () {
             $this->routes();
         });
-
-        Nova::serving(function (ServingNova $event) {
-            Nova::style('laravel-nova-pdf-tailwind', __DIR__.'/../dist/css/tailwind.css');
-        });
     }
 
     /**
