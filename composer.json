@@ -1,13 +1,16 @@
 {
-    "name": "monaye/laravel-nova-pdf",
+    "name": "padocia/laravel-nova-pdf",
     "description": "Generate Pdf from nova resources",
     "license": "MIT",
     "keywords": [
         "laravel",
         "nova"
     ],
+    "homepage": "https://github.com/padocia/laravel-nova-pdf",
     "authors": [
         {
+            "name": "Zakaria Tayeb Bey",
+            "email": "zakaria.tayebbey@gmail.com",
             "role": "Developer"
         }
     ],
