@@ -26,9 +26,9 @@ trait WithTailwind
      */
     protected function loadTailwind()
     {
-        if($this->tailwind)
-        {
-            $this->addStyle('laravel-nova-pdf-tailwind');
+        if ($this->tailwind) {
+            $path = __DIR__ . '/../../dist/css/tailwind.css';
+            $this->stylesContents[] = file_get_contents($path);
         }
 
         return $this;
