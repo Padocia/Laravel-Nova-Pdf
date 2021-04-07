@@ -100,7 +100,7 @@ abstract class ExportToPdf extends Action
     /**
      * @return string
      */
-    protected function defaultFilename()
+    protected function defaultFilename(): string
     {
         return $this->resource::uriKey().'-'.$this->uriKey().'-'.Carbon::now()->timestamp.'.'.$this->getFileExtension();
     }
