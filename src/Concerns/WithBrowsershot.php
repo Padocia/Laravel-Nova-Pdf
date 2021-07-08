@@ -17,8 +17,6 @@ trait WithBrowsershot
     {
         $this->browsershot = new Browsershot();
 
-        $this->handleBrowsershotOptions();
-
         return $this;
     }
 
@@ -27,7 +25,7 @@ trait WithBrowsershot
      */
     protected function handleBrowsershotOptions()
     {
-        $this->browsershot->format('A4');
+        $this->browsershot = $this->browsershot->format('A4');
 
         return $this;
     }

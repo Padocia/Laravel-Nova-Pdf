@@ -79,7 +79,11 @@ abstract class ExportToPdf extends Action
      */
     protected function saveAsPdf()
     {
-        $pdfFileContent = $this->browsershot->html($this->renderView())->pdf();
+        $this->browsershot = $this->browsershot->html($this->renderView());
+
+        $this->handleBrowsershotOptions();
+
+        $pdfFileContent = $this->browsershot->pdf();
 
         Storage::disk($this->getDisk())->put($this->getFilename(), $pdfFileContent);
 

@@ -108,7 +108,7 @@ Override the `handleBrowsershotOptions` method in the action class :
 ```php
 protected function handleBrowsershotOptions()
 {
-    $this->browsershot->format('A4');
+    $this->browsershot = $this->browsershot->format('A4');
 
     return $this;
 }
